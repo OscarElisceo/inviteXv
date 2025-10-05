@@ -139,7 +139,7 @@
       const urlParams = new URLSearchParams(window.location.search);
       // Lee 'familia' de la URL. Si no existe, usa 'Invitado Especial'.
       // La parte .replace(/_/g, ' ') es para que puedas usar nombres como "Familia_Garcia_Lopez" y se vea "Familia Garcia Lopez"
-      const guestFromURL = (urlParams.get('familia') || 'Invitado Especial').replace(/_/g, ' ');
+     const guestFromURL = (urlParams.get('familia') || 'Invitado Especial').replace(/_/g, ' ');
       // Lee 'pases' de la URL. Si no existe, usa '1'.
       const passesFromURL = urlParams.get('pases') || '1';
       
@@ -207,3 +207,4 @@
   </script>
 </body>
 </html>
+
