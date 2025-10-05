@@ -49,7 +49,7 @@
       color: white;
       background-image: linear-gradient(rgba(0, 18, 51, 0.7), rgba(0, 18, 51, 0.7)), url('1.jpg');
       background-size: cover;
-      background-position: center top; /* Corregido para enfocar el rostro */
+      background-position: center top; 
     }
 
     .hero-content h1 {
@@ -62,7 +62,7 @@
     .hero-content p { font-size: 1.3rem; font-weight: 300; margin-top: -1rem; letter-spacing: 2px; }
 
     .main-content {
-      background-image: url('https://www.transparenttextures.com/patterns/climpek.png');
+      background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png');
       background-color: var(--blanco-hueso);
       padding: 4rem 1.5rem;
     }
@@ -82,12 +82,9 @@
     .family-section h3 { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 1.4rem; color: var(--texto-principal); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
     .family-section p { font-weight: 400; margin-bottom: 1.5rem; }
 
-    /* NUEVO ESTILO PARA EL VERSO BÍBLICO */
     .biblical-quote {
-        margin: 2rem auto;
-        padding: 2rem;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
+        margin: 0 auto; /* Eliminado margen superior e inferior para que el decorador lo controle */
+        padding: 2rem 0; /* Espaciado interno vertical */
     }
     .biblical-quote p {
         font-family: 'Montserrat', sans-serif;
@@ -95,6 +92,8 @@
         font-size: 1.2rem;
         color: var(--texto-secundario);
         line-height: 1.8;
+        max-width: 500px; /* Para que no se extienda demasiado en pantallas grandes */
+        margin: 0 auto; /* Centrar el texto */
     }
     .biblical-quote .reference {
         display: block;
@@ -114,22 +113,14 @@
     }
 
     .countdown-section {
-        padding: 4rem 1rem;
-        position: relative;
-        color: white;
-        text-shadow: 0 2px 5px rgba(0,0,0,0.5);
-        border-radius: 15px;
-        overflow: hidden;
-        margin: 2rem 0;
+        padding: 4rem 1rem; position: relative; color: white;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.5); border-radius: 15px;
+        overflow: hidden; margin: 2rem 0;
     }
     .countdown-section::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
+        content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
         background-image: linear-gradient(rgba(10, 36, 99, 0.7), rgba(10, 36, 99, 0.7)), url('URL_DEL_FONDO_DEL_CONTADOR_AQUI');
-        background-size: cover;
-        background-position: center;
-        z-index: -1;
+        background-size: cover; background-position: center; z-index: -1;
     }
     .countdown-section .cursive-title { color: white; }
     .countdown { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
@@ -198,7 +189,7 @@
   <main class="main-content">
     <div class="content-wrapper">
 
-      <section class="section family-section">
+     <section class="section family-section">
         <h2 class="cursive-title">Con Alegría</h2>
         <p>Con la bendición de Dios y el amor de mi familia, tengo el honor de invitarlos a la celebración de mis XV años.</p>
         <div class="decorator"></div>
@@ -208,6 +199,11 @@
         <p>Carlos Hernández Sánchez<br>& Noemí Morales Pérez</p>
       </section>
 
+      <div class="decorator"></div>
+      <section class="biblical-quote">
+        <p>"Que nadie te menosprecie por ser joven. Al contrario, que los creyentes vean en ti un ejemplo a seguir en la manera de hablar, en la conducta, y en amor, fe y pureza."</p>
+        <span class="reference">1 Timoteo 4:12</span>
+      </section>
       <div class="countdown-section">
           <h2 class="cursive-title">La cuenta regresiva</h2>
           <div class="countdown">
@@ -336,7 +332,4 @@
     });
   </script>
 </body>
-
 </html>
-
-
