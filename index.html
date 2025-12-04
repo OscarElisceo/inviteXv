@@ -83,8 +83,8 @@
     .family-section p { font-weight: 400; margin-bottom: 1.5rem; }
 
     .biblical-quote {
-        margin: 0 auto; /* Eliminado margen superior e inferior para que el decorador lo controle */
-        padding: 2rem 0; /* Espaciado interno vertical */
+        margin: 0 auto;
+        padding: 2rem 0;
     }
     .biblical-quote p {
         font-family: 'Montserrat', sans-serif;
@@ -92,8 +92,8 @@
         font-size: 1.2rem;
         color: var(--texto-secundario);
         line-height: 1.8;
-        max-width: 500px; /* Para que no se extienda demasiado en pantallas grandes */
-        margin: 0 auto; /* Centrar el texto */
+        max-width: 500px;
+        margin: 0 auto;
     }
     .biblical-quote .reference {
         display: block;
@@ -122,8 +122,28 @@
         background-image: linear-gradient(rgba(10, 36, 99, 0.7), rgba(10, 36, 99, 0.7)), url('URL_DEL_FONDO_DEL_CONTADOR_AQUI');
         background-size: cover; background-position: center; z-index: -1;
     }
-    .countdown-section .cursive-title { color: white; }
-    .countdown { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
+    .countdown-section .cursive-title { color: white; margin-bottom: 0.5rem; }
+    
+    /* ESTILOS PARA LA FECHA Y ETIQUETA */
+    .event-label {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.2rem;
+        font-weight: 300;
+    }
+    
+    .countdown-date {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.8rem;
+        color: var(--oro);
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+
+    .countdown { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
     .countdown-item { background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); padding: 1rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); min-width: 80px; }
     .countdown-number { font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 2.5rem; color: white; }
     .countdown-label { font-size: 0.8rem; text-transform: uppercase; }
@@ -159,6 +179,8 @@
       .countdown { flex-wrap: wrap; }
       .countdown-item { flex-basis: calc(50% - 0.5rem); }
       .cursive-title { font-size: 2.8rem; }
+      .countdown-date { font-size: 1.4rem; }
+      .event-label { font-size: 1rem; }
       .music-player {
         position: absolute; bottom: 40px; left: 50%;
         transform: translateX(-50%); right: auto;
@@ -204,8 +226,13 @@
         <p>"Que nadie te menosprecie por ser joven. Al contrario, que los creyentes vean en ti un ejemplo a seguir en la manera de hablar, en la conducta, y en amor, fe y pureza."</p>
         <span class="reference">1 Timoteo 4:12</span>
       </section>
+      
       <div class="countdown-section">
           <h2 class="cursive-title">La cuenta regresiva</h2>
+          
+          <p class="event-label">Día del Evento:</p>
+          <p class="countdown-date">20 de Diciembre</p>
+          
           <div class="countdown">
             <div class="countdown-item"><span class="countdown-number" id="days">0</span><span class="countdown-label">Días</span></div>
             <div class="countdown-item"><span class="countdown-number" id="hours">0</span><span class="countdown-label">Horas</span></div>
@@ -333,6 +360,3 @@
   </script>
 </body>
 </html>
-
-
-
